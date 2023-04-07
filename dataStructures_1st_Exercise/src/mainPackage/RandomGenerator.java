@@ -46,7 +46,7 @@ public class RandomGenerator {
 
 	}
 	
-	public static int[] GenerateNonQniqueKeys(int numberOfNumbers) {
+	public static int[] GenerateNonQniqueKeys(int numberOfNumbers, int multiplier) {
 		
 		//Code given in the exercise
 		
@@ -56,7 +56,7 @@ public class RandomGenerator {
 		int maxIntNumber = 2*numberOfNumbers;
 		
 		int[] nonUniqueKeys = randomGenerator.ints(minIntNumber,
-		maxIntNumber+1).limit(numberOfNumbers).toArray();
+		maxIntNumber+1).limit(multiplier * numberOfNumbers).toArray();
 		
 		return nonUniqueKeys;
 
